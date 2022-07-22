@@ -1,4 +1,12 @@
-site_name: Bryan Kribbs Tech Learning Site.
+site_name: BK Tech Learning
+repo_url: https://github.com/bkribbs15/TechLearnings
 theme:
   name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+nav:
+  - Home: index.md
+  - Cloud-Native: ./cloud-native/index.md
+  - Cloudpaks: ./cloudpaks/index.md
 
