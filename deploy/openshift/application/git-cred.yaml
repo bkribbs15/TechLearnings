@@ -1,9 +1,0 @@
-kind: Secret
-apiVersion: v1
-metadata:
-  name: git-credentials
-  namespace: openshift-gitops
-data:
-  password: Z2hwXzlkcHh0ZTNDOVVVRkhOVHI3QllKSzR5aGZPM1NXZTQySkJvWg==
-  username: YmtyaWJiczE1
-type: kubernetes.io/basic-auth
