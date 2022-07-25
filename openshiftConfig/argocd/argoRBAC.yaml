@@ -1,0 +1,38 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: openshift-gitops-argocd
+  namespace: openshift-gitops
+rules:
+- apiGroups:
+  - '*'
+  resources:
+  - '*'
+  verbs:
+  - '*'
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: openshift-gitops-argocd
+  namespace: openshift-gitops
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: openshift-gitops-argocd
+subjects:
+- kind: ServiceAccount
+  name: argocd-argocd-application-controller
+  namespace: openshift-gitops
+- kind: ServiceAccount
+  name: argocd-cluster-argocd-application-controller
+  namespace: openshift-gitops
+- kind: ServiceAccount
+  name: argocd-application-controller
+  namespace: openshift-gitops
+- kind: ServiceAccount
+  name: argocd-server
+  namespace: openshift-gitops
+- kind: ServiceAccount
+  name: job-openshift-gitops-operator
+  namespace: openshift-operators
