@@ -17,5 +17,6 @@ spec:
       containers:
       - name: site
         image: quay.io/bkribbs15/code-site:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
