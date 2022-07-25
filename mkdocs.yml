@@ -1,11 +1,26 @@
-site_name: BK Tech Learning
+site_name: codebk
 repo_url: https://github.com/bkribbs15/TechLearnings
 theme:
   name: material
+  palette:
+    primary: black
+    accent: #A9A9A9
+  logo: images/codebk.svg
+  favicon: images/watson.png
   features:
     - navigation.instant
     - navigation.tabs
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
 nav:
   - Home: index.md
   - Cloud-Native: ./cloud-native/index.md
   - Cloudpaks: ./cloudpaks/index.md
+  - Watson Services: ./watson/index.md
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
