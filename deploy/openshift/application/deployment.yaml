@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: code-site
+  labels:
+    app: code-site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: code-site
+  template:
+    metadata:
+      labels:
+        app: code-site
+    spec:
+      containers:
+      - name: site
+        image: quay.io/bkribbs15/code-site:latest
+        ports:
+        - containerPort: 8080

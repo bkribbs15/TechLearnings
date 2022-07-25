@@ -1,4 +1,40 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: build-push-pipeline
+  name: build-push-deploy
+spec:
+  workspaces:
+  - name: source
+  params:
+  - name: git_url
+    type: string
+    description: url of the git repo to be cloned
+  - name: git_revision
+    type: string
+    description: revision tag
+  tasks:
+  - name: fetch-repository
+    taskRef:
+      name: git-clone
+      kind: ClusterTask
+    workspaces:
+    - name: output
+      workspace: source
+    params:
+    - name: url
+      value: $(params.git_url)
+    - name: subdirectory
+      value: ""
+    - name: deleteExisting
+      value: "true"
+    - name: revision
+      value: $(params.git_revision)
+  - name: sync-resources
+    taskRef:
+      name: sync-resources
+      kind: Task
+    workspaces:
+    - name: source
+      workspace: source
+    runAfter:
+    - fetch-repository
