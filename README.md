@@ -13,7 +13,7 @@ https://bkribbs15.github.io/TechLearnings/
 
 2. Install the mkdocs theme - [Material](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
-3. Once everything is installed, in Terminal move into the TechLearnings directory.
+3. Once everything is installed, in Terminal `cd` into the TechLearnings directory.
 
 4. Run `mkdocs build` to build the site.
 
