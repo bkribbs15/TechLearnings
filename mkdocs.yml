@@ -3,6 +3,7 @@ repo_url: https://github.com/bkribbs15/TechLearnings
 dev_addr: '0.0.0.0:8080'
 theme:
   name: material
+  highlightjs: true
   palette:
     primary: black
     accent: #A9A9A9
