@@ -1,4 +1,3 @@
-
 # TechLearnings
 
 You can learn from my experiences using Cloud Native technologies on client engagements at IBM.
