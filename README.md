@@ -19,4 +19,4 @@ https://bkribbs15.github.io/TechLearnings/
 
 5. Run `mkdocs serve` to start the site locally.
 
-6. Navigate to [localhost:8000](localhost:8000)
+6. Navigate to [localhost:8080](localhost:8080)
