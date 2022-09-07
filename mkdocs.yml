@@ -9,16 +9,43 @@ theme:
     accent: #A9A9A9
   logo: images/codebk.svg
   favicon: images/watson.png
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   features:
     - navigation.instant
     - navigation.tabs
     - navigation.tracking
     - navigation.sections
     - navigation.top
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      type: datetime                          #Times are all UTC
+      enable_creation_date: true
+  #- mkdocs-video
+copyright: Copyright © 2022 codebk
 nav:
   - Home: index.md
-  - Cloud-Native: ./cloud-native/index.md
-  - Cloudpaks: ./cloudpaks/index.md
+  - Cloud-Native:
+    - DevOps: 
+      - Overview: ./cloud-native/devops/index.md
+  - Cloudpaks: 
+    - Overview: ./cloudpaks/index.md
+    - Integration: 
+      - Overview: ./cloudpaks/index.md
+      - Installation: ./cloudpaks/index.md
+      - Observability: ./cloudpaks/index.md
+    - Data:
+      - Overview: ./cloudpaks/index.md
+    - Business Automation: 
+      - Overview: ./cloudpaks/index.md
+  - Openshift:
+    - OCS:
+      - Overview: ./openshift/ocs/index.md
+    - Operators:
+      - Overview: ./openshift/operators/index.md
   - Watson Services: ./watson/index.md
 markdown_extensions:
   - pymdownx.highlight:
